@@ -1,0 +1,16 @@
+{
+    "name": "csvuploadproject-fs",
+    "private": true,
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
+    "scripts": {
+        "start": "concurrently \"npm start --workspace frontend\" \"npm start --workspace backend\"",
+        "test": "concurrently \"npm test --workspace frontend\" \"npm test --workspace backend\"",
+        "test:ui": "concurrently \"npm run test:ui --workspace frontend\" \"npm run test:ui --workspace backend\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.1"
+    }
+}
